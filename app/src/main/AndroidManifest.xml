@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="au.edu.utas.iqbalma.kit305_assign2">
+    <!-- Camera permission step 1 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KIT305_assign2">
+        <activity
+            android:name=".TapListOfButtons"
+            android:exported="false" />
+        <activity
+            android:name=".TapGameComplete"
+            android:exported="false" />
+        <activity
+            android:name=".TapGame"
+            android:exported="false" />
+        <activity
+            android:name=".FreeListOfButtons"
+            android:exported="false" />
+        <activity
+            android:name=".FreeToPlayComplete"
+            android:exported="false" />
+        <activity
+            android:name=".FreeToPlay"
+            android:exported="false" />
+        <activity
+            android:name=".ListOfButtons"
+            android:exported="false" />
+        <activity
+            android:name=".HistoryPage"
+            android:exported="false"
+            android:label="@string/title_activity_history_page"
+            android:theme="@style/Theme.KIT305_assign2.NoActionBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".DotGameComplete"
+            android:exported="false" />
+        <activity
+            android:name=".DotGame"
+            android:exported="false" />
+        <activity
+            android:name=".SettingPage"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Camera Permission step 2 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="au.edu.utas.iqbalma.kit305_assign2"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

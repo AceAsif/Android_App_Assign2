@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FreeToPlayComplete">
+
+    <ImageView
+        android:id="@+id/imageViewFree"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+
+    <TextView
+        android:id="@+id/lblUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="serif"
+        android:text="@string/user_name"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewFree"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewFree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/over"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.113" />
+
+
+    <TextView
+        android:id="@+id/gameDurationFree"
+        android:layout_width="217dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/gameDur"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFree" />
+
+    <TextView
+        android:id="@+id/textButtonsFree"
+        android:layout_width="265dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/but_press"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameDurationFree" />
+
+    <TextView
+        android:id="@+id/textDescrip"
+        android:layout_width="342dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/free_result_tip"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textButtonsFree" />
+
+    <ImageView
+        android:id="@+id/userPicFree"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDescrip"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/retryBut"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="28dp"
+        android:drawableTop="@drawable/ic_baseline_replay_24"
+        android:text="Retry"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userPicFree" />
+
+    <Button
+        android:id="@+id/quit"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:drawableTop="@drawable/ic_baseline_close_24"
+        android:text="Quit"
+        app:layout_constraintStart_toEndOf="@+id/cameraBut"
+        app:layout_constraintTop_toTopOf="@+id/cameraBut" />
+
+    <Button
+        android:id="@+id/cameraBut"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:drawableTop="@android:drawable/ic_menu_camera"
+        android:text="Camera"
+        app:layout_constraintStart_toEndOf="@+id/retryBut"
+        app:layout_constraintTop_toTopOf="@+id/retryBut" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

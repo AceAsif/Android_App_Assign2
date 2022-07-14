@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#EFF4F4"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="272dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/app_title"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.647"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="102dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/welcome"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/txtName"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
+
+    <ImageView
+        android:id="@+id/gameIcon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/appTitle"
+        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_game_icon" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="202dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/enterHint"
+        android:inputType="textPersonName"
+        android:text="@string/user_name"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/welcome"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+    <GridLayout
+        android:layout_width="401dp"
+        android:layout_height="477dp"
+        android:layout_margin="20sp"
+        android:columnCount="2"
+        android:rowCount="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        app:layout_constraintVertical_bias="0.578">
+
+        <Button
+            android:id="@+id/startBut"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8sp"
+            android:background="@drawable/btn_bg"
+            android:text="@string/start_Button"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/freeToPlayBut"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8sp"
+            android:background="@drawable/btn_bg"
+            android:text="@string/free_to_play_Button"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/historyBut"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8sp"
+            android:background="@drawable/btn_bg"
+            android:text="@string/history_Button"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/settingBut"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8sp"
+            android:background="@drawable/btn_bg"
+            android:text="@string/setting_Button"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/tapGameBut"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8sp"
+            android:background="@drawable/btn_bg"
+            android:text="@string/bonus_Button"
+            android:textSize="16sp" />
+
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
